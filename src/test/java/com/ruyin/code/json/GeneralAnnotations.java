@@ -2,6 +2,9 @@ package com.ruyin.code.json;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ser.FilterProvider;
+import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
+import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import com.ruyin.code.json.annotation.general.annotation.*;
 import org.junit.Test;
 
@@ -64,6 +67,53 @@ public class GeneralAnnotations {
         //指明展示那些标识指明的属性
         String result = new ObjectMapper().writerWithView(Views.Public.class)
                 .writeValueAsString(item);
+        System.out.println(result);
+    }
+
+    @Test
+    public void whenSerializingUsingJsonIdentityInfo() throws JsonProcessingException {
+        UserWithIdentity user = new UserWithIdentity(1,"John");
+        ItemWithIdentity item = new ItemWithIdentity(2,"book",user);
+        user.add(item);
+
+        String result = new ObjectMapper().writeValueAsString(item);
+        System.out.println(result);
+    }
+
+    @Test
+    public void whenSerializingUsingJsonFilter() throws JsonProcessingException {
+        BeanWithFilter bean = new BeanWithFilter(24,"Joe");
+        FilterProvider filters = new SimpleFilterProvider().addFilter("myFilter",
+                SimpleBeanPropertyFilter.filterOutAllExcept("name"));
+
+        String result = new ObjectMapper().writer(filters).writeValueAsString(bean);
+        System.out.println(result);
+    }
+
+    @Test
+    public void whenSerializingUsingCustomAnnotation() throws JsonProcessingException {
+        BeanWithCustomAnnotation bean = new BeanWithCustomAnnotation(24,"Joe",null);
+        String result = new ObjectMapper().writeValueAsString(bean);
+        System.out.println(result);
+    }
+
+    @Test
+    public void whenSerializingUsingMixInAnnotation() throws Exception {
+        User user = new User(24,"John");
+        String result = new ObjectMapper().writeValueAsString(user);
+        System.out.println(result);
+
+        result = new ObjectMapper().addMixIn(String.class,MyMixInForString.class).writeValueAsString(user);
+        System.out.println(result);
+    }
+
+    @Test
+    public void whenDisablingAllAnnotations() throws JsonProcessingException {
+        MyBeanTwo bean = new MyBeanTwo(21,null);
+        String result = new ObjectMapper()
+                //.disable(MapperFeature.USE_ANNOTATIONS)
+                .writeValueAsString(bean);
+
         System.out.println(result);
     }
 }
