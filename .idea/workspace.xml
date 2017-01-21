@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d9092c5-0358-4bdf-9f95-56d81378b5d8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+    <list default="true" id="1d9092c5-0358-4bdf-9f95-56d81378b5d8" name="Default" comment="删除多余内容">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -824,7 +813,7 @@
       <updated>1484277205400</updated>
       <workItem from="1484277209041" duration="22102000" />
       <workItem from="1484720001059" duration="10790000" />
-      <workItem from="1484963805663" duration="23086000" />
+      <workItem from="1484963805663" duration="23173000" />
     </task>
     <task id="LOCAL-00001" summary="继续学习">
       <created>1484749243142</created>
@@ -840,7 +829,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484999539095</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="删除多余内容">
+      <created>1484999730060</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1484999730060</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -876,7 +872,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55978000" />
+    <option name="totallyTimeSpent" value="56065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -953,7 +949,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="继续学习" />
     <MESSAGE value="基础完结" />
-    <option name="LAST_COMMIT_MESSAGE" value="基础完结" />
+    <MESSAGE value="删除多余内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除多余内容" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
